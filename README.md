@@ -97,7 +97,7 @@ Open `Workforce_Productivity_Dashboard.pbix` in Power BI Desktop. If refreshing 
 
 ## 📄 CV / Portfolio Summary
 
-> **Workforce Productivity & Bottleneck Intelligence** — *GitHub Repository* | Tools: SQL, Power BI, DAX, Power Query
+> * Workforce Productivity & Bottleneck Intelligence — GitHub Repository | Tools: SQL, Power BI, DAX, Power Query, Data Modeling (Star Schema & Relationship Management
 > - Modeled 8,110 process logs across 25 employees into a star-schema Power BI dashboard, exposing a workforce capacity gap where department-level averages (87% productivity) masked task-level risk.
 > - Built DAX measures identifying HR & Admin as the sole department below an 80% capacity-utilization threshold (79.3%) and Procurement as the top task-level SLA hotspot (27.8% breach rate, 3x the org average).
 > - Quantified a rising SLA breach trend (18.8% → 20.1%, H1 to H2) and an estimated $29,400/year cost of SLA overruns, alongside a role-level workload imbalance (Specialists at ~101% utilization vs. Team Leads at ~44%).
