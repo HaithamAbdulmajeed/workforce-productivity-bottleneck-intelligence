@@ -1,4 +1,3 @@
--- 1. إنشاء جدول الموظفين (Employees Dimension Table)
 CREATE TABLE Employees (
     employee_id INT PRIMARY KEY,
     full_name VARCHAR(100),
@@ -7,7 +6,6 @@ CREATE TABLE Employees (
     hourly_rate DECIMAL(10, 2)
 );
 
--- 2. إنشاء جدول المهام والعمليات (Tasks Dimension Table)
 CREATE TABLE Tasks (
     task_id INT PRIMARY KEY,
     task_name VARCHAR(100),
@@ -16,7 +14,6 @@ CREATE TABLE Tasks (
     department VARCHAR(50)
 );
 
--- 3. إنشاء جدول سجل المعاملات والعمليات (Process Logs Fact Table)
 CREATE TABLE Process_Logs (
     log_id INT PRIMARY KEY,
     task_id INT,
@@ -28,7 +25,6 @@ CREATE TABLE Process_Logs (
     FOREIGN KEY (employee_id) REFERENCES Employees(employee_id)
 );
 
--- 4. إدراج بيانات الموظفين
 INSERT INTO Employees VALUES
 (101, 'أحمد المنصور', 'Operations', 'Senior Specialist', 45.00),
 (102, 'سارة الغامدي', 'Operations', 'Data Analyst', 35.00),
@@ -37,7 +33,6 @@ INSERT INTO Employees VALUES
 (105, 'عمر الزهراني', 'Operations', 'Junior Specialist', 25.00),
 (106, 'فاطمة الشهري', 'Finance', 'Financial Analyst', 38.00);
 
--- 5. إدراج بيانات المهام والمعايير (SLAs)
 INSERT INTO Tasks VALUES
 (501, 'System Access & Onboarding', 'High', 2.0, 'HR & Admin'),
 (502, 'Financial Audit Verification', 'Critical', 5.0, 'Finance'),
@@ -45,7 +40,6 @@ INSERT INTO Tasks VALUES
 (504, 'Database Server Migration', 'Critical', 12.0, 'IT Support'),
 (505, 'Procurement Request Processing', 'High', 4.0, 'Operations');
 
--- 6. إدراج سجلات العمليات السابقة والحالية
 INSERT INTO Process_Logs VALUES
 (1001, 503, 101, '2026-08-01 08:00:00', '2026-08-01 17:00:00', 'Completed'),
 (1002, 503, 105, '2026-08-01 08:30:00', '2026-08-02 12:00:00', 'Completed'),
